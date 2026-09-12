@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --clr-primary: #121414;
+  --clr-sec: #3c924a;
+  --text-clr: #e5e5e5;
+  --white: #ffffff;
+  --header-height: 3.5rem;
+  --body-clr: #191b1c;
+
+  /*========== Font and typography ==========*/
+  --Mont: "Montserrat", sans-serif;
+  --open: "Open Sans", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --openReg: 400;
+  --openMed: 500;
+  --openSemi: 800;
+  --MontReg: 400;
+  --MontMed: 500;
+  --MontSemi: 600;
+  --MontBold: 700;
+}
+/*
+    variable declaration ends here
+*/
+
+/* Responsive typography */
+@media screen and (min-width: 992px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  color: var(--body-clr);
+  background-color: var(--white);
+}
+
+body {
+  background-color: var(--body-clr);
+  font-family: var(--open);
+  font-size: var(--normal-font-size);
+  position: relative;
+  overflow-x: hidden;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  //   background-color: red;
+  padding-top: 3rem;
+
+  #home {
+    // min-height: 100vh;
+    width: 100vw;
+    // background-color: green;
+    .container {
+      .row {
+        .subtitle {
+          font-family: var(--Mont);
+          font-weight: var(--MontBold);
+          text-transform: capitalize;
+          color: var(--clr-sec);
+          font-size: var(--h2-font-size);
+        }
+        .title {
+          font-size: var(--biggest-font-size);
+          font-family: var(--Mont);
+          font-weight: var(--MontBold);
+        }
+        .des {
+          color: var(--text-clr);
+        }
+        .btn {
+          background-color: var(--clr-sec);
+          padding: 0.5rem 30px;
+          text-transform: capitalize;
+          font-family: var(--Mont);
+          font-weight: var(--MontBold);
+          color: var(--white);
+        }
+
+        .row {
+          //   background-color: red;
+          margin-top: 2rem;
+          border: 0.7px solid rgba(211, 211, 211, 0.425);
+          border-radius: 9px;
+          min-height: 200px;
+          text-align: center;
+          justify-content: center;
+          justify-content: space-evenly;
+          align-items: center;
+
+          diV {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          i {
+            font-size: var(--biggest-font-size);
+            color: var(--clr-sec);
+          }
+          h2 {
+            font-size: var(--h3-font-size);
+            font-family: var(--Mont);
+            font-weight: var(--MontMed);
+            text-transform: capitalize;
+          }
+        }
+
+        .home-img {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #roadmap {
+    // min-height: 100vh;
+    width: 100%;
+    // background-color: red;
+    padding-top: 20px;
+
+    .container {
+      .title {
+        font-size: var(--biggest-font-size);
+        text-align: center;
+        font-family: var(--Mont);
+        color: var(--white);
+        font-weight: var(--MontSemi);
+        max-width: 35rem;
+        display: block;
+        margin: 0 auto;
+        text-transform: capitalize;
+
+        span {
+          color: var(--clr-sec);
+        }
+      }
+      .row {
+        margin: 0 auto;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        div {
+          background-color: transparent;
+          min-height: 300px;
+          border-radius: 9px;
+          padding: 10px;
+          border: 0.7px solid rgba(211, 211, 211, 0.425);
+          margin: 0 auto;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .title1 {
+            text-transform: capitalize;
+            font-family: var(--Mont);
+            font-weight: var(--MontSemi);
+            font-size: var(--h2-font-size);
+          }
+          h4 {
+            font-size: var(--h3-font-size);
+          }
+          p {
+            color: #b3b3b3;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100vw;
+  background-color: var(--clr-primary);
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+      margin-top: 2rem;
+
+      a {
+        color: var(--clr-sec);
+        i {
+          font-size: var(--h1-font-size);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    background-color: #2b2b2b;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+      height: 100%;
+      // background-color: green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+
+      p {
+        font-family: var(--Mont);
+        text-transform: capitalize;
+        display: block;
+        // background-color: purple;
+        height: inherit;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main #home .container .row .row {
+    max-width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
